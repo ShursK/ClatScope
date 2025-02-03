@@ -6,7 +6,7 @@ ClatScope Info Tool – A versatile OSINT utility for retrieving geolocation, DN
 
 Command Line Interface Version:
 
-![OSINT](https://github.com/user-attachments/assets/7ab0f57d-091b-46c7-92fd-db61dad5809a)
+![clatscopecli](https://github.com/user-attachments/assets/85a17e63-8a81-4405-ad47-846367c1c923)
 
 Graphical User Interface Version:
 
