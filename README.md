@@ -67,7 +67,7 @@ ClatScope is an OSINT tool that performs various lookups and analyzes provided d
 
 Throughout the script, a textual UI is presented, prompting the user for inputs (e.g., IP address, phone number). Results are printed in styled ASCII frames using the pystyle library for aesthetics.
 
-**Version:** 1.10 (2025-02-06)
+**Version:** 1.10 (CLI)1.10.2 (GUI) (2025-02-06)
 **Author:** Joshua M Clatney aka Clats97 (Ethical Pentesting Enthusiast)
 
 ## Description
@@ -122,10 +122,7 @@ ClatScope Info Tool is an all-in-one OSINT (Open-Source Intelligence) utility sc
 
   pip install requests phonenumbers dnspython email-validator beautifulsoup4 lxml python-whois tqdm openai python-magic Pillow PyPDF2 openpyxl python-docx python-pptx mutagen tinytag tkinter
 
-
-
-
-   3. **Run the Script**:
+ 3. **Run the Script**:
     Click on the Python file or open it in Visual Studio Code 
     
 ## Usage
@@ -157,3 +154,4 @@ This project is released under the Apache 2.0 License.
 
 Copyright 2025 Joshua M Clatney (Clats97) 
 
+**DISCLAIMER: VERIFY OUTPUTS GENERATED FROM THIS TOOL WHEN IN DOUBT OR FOR CRITICAL TASKS. IT IS NOT IMMUNE TO FALSE POSITIVES, FALSE NEGATIVES, HALLUCINATION, OR OTHER POTENTIAL FLAWS. ALWAYS USE RESPONSIBLY AND IN ACCORDNCE WITH APPLICABLE LAWS, REGULATIONS, LEGISLATION, AND BEST PRACTICES. DO NOT USE THIS TOOL AS A MEANS TO COMMIT A CRIME. THIS TOOL HAS NO GURANTEES OR WARRANTY, EXPRESS OR IMPLIED. THE CREATOR OF THIS TOOL IS NOT LIABLE FOR MISUSE.**
