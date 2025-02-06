@@ -67,7 +67,7 @@ ClatScope is an OSINT tool that performs various lookups and analyzes provided d
 
 Throughout the script, a textual UI is presented, prompting the user for inputs (e.g., IP address, phone number). Results are printed in styled ASCII frames using the pystyle library for aesthetics.
 
-**Version:** 1.02
+**Version:** 1.10 (2025-02-06)
 **Author:** Joshua M Clatney aka Clats97 (Ethical Pentesting Enthusiast)
 
 ## Description
@@ -107,8 +107,10 @@ ClatScope Info Tool is an all-in-one OSINT (Open-Source Intelligence) utility sc
 31. **Company Search** - Gets company info through Hunter.
 32. **Person Info Search** - Retrieves person info through Hunter.
 33. **Combined Search** - Performs a combined enrichment.
-34. **Email Search** - Dees a reverse email search through CastrickClues
-35. **Theme/Color Settings** – Adjust console output color.
+34. **Email Search** - Does a reverse email search through CastrickClues.
+35. **Domain Search** - Performs a VirusTotal check on a domain.
+36. **Malice Search** - Identifies potential malicious content based on text input.
+37. **Theme/Color Settings** – Adjust console output color.
 
 ## Installation
 1. **Clone the Repository (or download the zip)**:
@@ -118,7 +120,9 @@ ClatScope Info Tool is an all-in-one OSINT (Open-Source Intelligence) utility sc
 2. **Install Dependencies**:
     Open command prompt and write:
 
-   pip install requests pystyle phonenumbers dnspython email-validator beautifulsoup4 whois tqdm openai==0.28 python-magic pillow PyPDF2 openpyxl python-docx python-pptx mutagen tinytag
+  pip install requests phonenumbers dnspython email-validator beautifulsoup4 lxml python-whois tqdm openai python-magic Pillow PyPDF2 openpyxl python-docx python-pptx mutagen tinytag tkinter
+
+
 
 
    3. **Run the Script**:
@@ -139,96 +143,7 @@ When you run the script, it will present you with a menu. Simply type the number
 - The script references a Google Custom Search API key (API_KEY, CX, and CLIENT_ID), an OpenAI API key, a Perplexity API key, a Botometer API key, and HIBP API key. If you want to use the features that query external services (like Google search or HIBP), you must obtain valid keys and place them in the script.
 - **Important:** If you do not have valid API keys, the related external queries (e.g. person search, reverse phone lookup, business search, travel risk search, Botometer search) will fail or return errors.
 
-
-**Below is a closer look at what each function in the script accomplishes:**
-
-1.	**Main Menu & main() Function**
-- Displays the ASCII-based menu.
-- Repeatedly prompts for user input.
-- Clalls the relevant function (like ip_info(ip) or deep_account_search(nickname)) based on the menu choice.
-
-2.	**ip_info(ip)**
-- Uses requests.get("https://ipinfo.io/{ip}/json") to fetch IP-related information.
-- Displays city, region, country, ISP (org), approximate location, etc.
-
-3.	**deep_account_search(nickname)**
--Iterates over a large list of possible platform URL formats (e.g., https://twitter.com/{}, https://reddit.com/user/{}, etc.).
-- Sends asynchronous HTTP requests with ThreadPoolExecutor to quickly check which URLs respond with status code 200.
-- Prints whether each potential profile is “Found” or “Not Found.”
-
-4.	**phone_info(phone_number)**
-- Parses the phone number using phonenumbers.parse(...).
-- Receives geocoding (country, region) and the carrier operator.
-- Validates whether the number format is correct.
-
-5.	**reverse_phone_lookup(phone_number)**
-- Uses Google’s Custom Search API to search references to the phone number on the internet.
--Fetches text from each top link and displays them.
-
-6.	**dns_lookup(domain)**
-- Uses the dns.resolver.resolve() method to query A, CNAME, MX, and NS records.
-- Shows “No records found” if none exist.
-
-7.	**email_lookup(email)**
-- Validates email format with email_validator.
-- Checks DNS MX records for the domain.
-- Declares “Likely Valid” if MX records are found, or “Might be invalid” otherwise.
-
-8.	**person_search(first_name, last_name, city)**
-- Leverages Google’s Custom Search API to look for references to a person’s name + location.
-- Fetches page text, then displays top results in a nicely formatted table.
-
-9.	**analyze_email_header(raw_headers**
-- Parses raw email headers using Python’s built-in email.parser.
-- Extracts IP addresses from any “Received” lines.
-- Performs geolocation on each IP.
-- Checks for SPF, DKIM, and DMARC results in Authentication-Results fields.
-
-10.	**haveibeenpwned_check(email)**
-- Calls the HIBP v3 API.
-- If breaches are found, prints each breach name, domain, date, data classes.
-- Otherwise, declares “No breaches found.”
-
-11.	**whois_lookup(domain)**
-- Uses Python’s whois to retrieve domain registration data.
-- Shows registrar name, creation/expiration dates, name servers, etc.
-
-12.	**password_strength_tool() / check_password_strength(password)**
-- Checks password length and usage of uppercase, lowercase, digits, and symbols.
-- Looks for common words in the passwords.txt file if present.
-- Outputs “Weak,” “Moderate,” or “Strong.”
-
-13.	**check_ssl_cert(domain)**
-- Creates a secure socket connection on port 443 to retrieve the SSL certificate.
-- Prints the certificate issuer, validity range, etc.
-
-14.	**check_robots_and_sitemap(domain)**
-- Tries to retrieve robots.txt and sitemap.xml from https://{domain}/.
-- Prints the HTTP status code and the first few lines of the file, if it exists.
-
-15.	**check_dnsbl(ip_address)**
-- Reverses the IP (e.g., 1.2.3.4 → 4.3.2.1) and checks several DNS blacklists by querying
-4.3.2.1.zen.spamhaus.org, etc.
-- If an answer is returned, the IP is blacklisted on that DNSBL.
-
-16.	**fetch_webpage_metadata(url**
-- Fetches a webpage’s <title>, meta description, and meta keywords to provide quick SEO context.
-
-17.	**settings() / change_color()**
-- Provides a submenu to alter the default console color for script output.
-
-18. **travel_risk_search**
-- Provides over 40 references to risks while travelling abroad.
-
-19. **botometer_search**
-- Identifies potential X/Twitter bot accounts.
-
-20. **business_search**
-- Retrieves information about a business.
-________________________________________
-
-
-**THIS TOOL IS NOT PERFECT. THERE IS STILL ROOM FOR IMPROVMENT, AND I AM WORKING ON ADDING NEW FEATURES AND REFINEMENTS. SOMETIMES A USERNAME SEARCH WILL RESULT IN A FALSE POSITIVE AND/OR THE URL WILL NOT RESOLVE. IT HAS BEEN TESTED AND IS ACCURATE, BUT NOT 100% ACCURATE. VERIFY THE OUTPUTS IF YOU ARE NOT SURE.**
+**THIS TOOL IS NOT PERFECT. THERE IS STILL ROOM FOR IMPROVEMENT, AND I AM WORKING ON ADDING NEW FEATURES AND REFINEMENTS. SOMETIMES A USERNAME SEARCH WILL RESULT IN A FALSE POSITIVE AND/OR THE URL WILL NOT RESOLVE. IT HAS BEEN TESTED AND IS ACCURATE, BUT NOT 100% ACCURATE. VERIFY THE OUTPUTS IF YOU ARE NOT SURE.**
 
 ## Contributing
 1. Fork this repository`
