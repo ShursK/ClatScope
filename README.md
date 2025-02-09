@@ -152,6 +152,6 @@ I welcome any improvements or additional OSINT features!
 ## License
 This project is released under the Apache 2.0 License.
 
-Copyright 2025 Joshua M Clatney (Clats97) 
+Copyright 2025 Joshua M Clatney (Clats97) All Rights Reserved
 
-**DISCLAIMER: VERIFY OUTPUTS GENERATED FROM THIS TOOL WHEN IN DOUBT OR FOR CRITICAL TASKS. IT IS NOT IMMUNE TO FALSE POSITIVES, FALSE NEGATIVES, HALLUCINATION, OR OTHER POTENTIAL FLAWS. ALWAYS USE RESPONSIBLY AND IN ACCORDNCE WITH APPLICABLE LAWS, REGULATIONS, LEGISLATION, AND BEST PRACTICES. DO NOT USE THIS TOOL AS A MEANS TO COMMIT A CRIME. THIS TOOL HAS NO GURANTEES OR WARRANTY, EXPRESS OR IMPLIED. THE CREATOR OF THIS TOOL IS NOT LIABLE FOR MISUSE.**
+**DISCLAIMER: This project comes with no warranty, express or implied. The author is not responsible for abuse, misuse, or vulnerabilities. Please use responsibly and ethically in accordance with relevant laws, regulations, legislation and best practices.**
