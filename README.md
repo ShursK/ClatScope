@@ -22,48 +22,7 @@ Graphical User Interface Version:
 
 **NO REFUNDS**
 
-![osintscreenshot](https://github.com/user-attachments/assets/b394bf22-d1af-42d7-95d2-1d048db5c89f)
-
-ClatScope is an OSINT tool that performs various lookups and analyzes provided data:
-
-1.	**IP Address Lookups:**
-
-- Retrieves IP geolocation details, ISP, and region.
-- Performs DNSBL checks to see if an IP is blacklisted.
-
-2.	**Phone Number Lookups:**
-
-- Fetches basic phone number details (region, carrier).
-- Conducts a reverse phone lookup via Google search (Custom Search API).
-
-3.	**Email Lookups and Analysis:**
-
-- Checks email validity and existence of mail exchanger (MX) records.
-- Performs data breach checks against Have I Been Pwned (HIBP).
--Analyzes raw email headers (extracting IP addresses, SPF, DKIM, DMARC alignment, etc.).
-
-4.	**Username Searches:**
-
-- Searches across multiple platforms (e.g., Facebook, Twitter, Instagram, etc.) to see if a username exists.
-
-5.	**Domain / Website Lookups:**
-
-- DNS record queries (A, CNAME, MX, NS).
-- WHOIS details (registrar, creation date, etc)
-- IS details (registrar, creation date, etc.).
-- SSL certificate analysis.
-- Robots.txt and sitemap.xml retrieval to discover site structure.
-- Webpage metadata extraction (title, meta keywords, meta description).
-
-7.	**Password Strength Checking:**
-
-- Evaluates complexity based on length, character variety, and common word usage.
-
-8.	**Additional Features:**
-
-- Person name searches (via Google’s Custom Search API) to get text from resulting pages.
-- Reverse DNS lookups for IP addresses.
-- Settings menu to change color scheme.
+ClatScope is an OSINT tool that performs various lookups and analyzes provided data.
 
 Throughout the script, a textual UI is presented, prompting the user for inputs (e.g., IP address, phone number). Results are printed in styled ASCII frames using the pystyle library for aesthetics.
 
@@ -110,7 +69,26 @@ ClatScope Info Tool is an all-in-one OSINT (Open-Source Intelligence) utility sc
 34. **Email Search** - Does a reverse email search through CastrickClues.
 35. **Domain Search** - Performs a VirusTotal check on a domain.
 36. **Malice Search** - Identifies potential malicious content based on text input.
-37. **Theme/Color Settings** – Adjust console output color.
+37. **Supply / Vendor Search** - Finds information about companies that are suppliers or vendors.
+38. **Business Reputation Search** - Gives details about the reputation of a business.
+39. **Wayback Machine Search** - Allows the user to view archived versions of a website.
+40. **Port Scan** - Scans a domain for open ports.
+41. **Bulk CSV Search** - Extracts IP information from a CSV file.
+42. **Vulnerability Search** - Displays data on known vulnerabilities by keyword.
+43.  **Phone Leak Search** - Enquires whether a phone number is associated with an information leak.
+44.  **AES Encryption / AES Decryption** - Encrypts plaintext with AES-256-CBC. Decrypts ciphertext if the correct key and IV is used.
+45.  **Email Intelligence Search** - Retrieves public information from a provided email.
+46.  **Website Search** - Extracts contact information from a domain / URL.
+47.  **Reddit User Search** - Checks if a user has a Reddit account.
+48.  **TikTok User Search** - Checks if a user is on TikTok.
+49.  **TrueCaller Search** - Checks if a user is using Truecaller.
+50.  **Sex Offender Search** - Identifies sex offenders by name.
+51.  **WhatsApp Search** - Verifies whether a phone number has a WhatsApp account.
+52.  **Skip Trace Search (Name, ID)** - Fetches details about a person by searching a name, or searching an ID number from the name search.
+53.  **Ship Search** - Shows data about a ship by MMSI number. Shows information of a ship from a location.
+54.  **Aircraft Search** - Retrieves aircraft data by location. Retrieves aircraft data by call sign.
+55.  **Predicta Person Search** - Gives thorough information about a person using Predicta.
+56. **Theme/Color Settings** – Adjust console output color.
 
 ## Installation
 1. **Clone the Repository (or download the zip)**:
