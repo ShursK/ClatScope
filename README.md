@@ -1,8 +1,10 @@
 # ClatScope Info Tool
 
-**CLATSCOPE NOW HAS 60 FEATURES**
-
 ClatScope Info Tool – A versatile OSINT utility for retrieving geolocation, DNS, WHOIS, phone, email, usernames, person related data, password strength, data breach information and more. Perfect for investigators, pentesters, or anyone looking for a quick reconnaissance script. **This script requires API keys for some functions (Google Custom Search, OpenAI, Perplexity, Have I Been Pwned, Botometer, Hunter, Castrick, RapidAPI). If you do not want to set up your own API keys, below there is a subscription service. Otherwise, you are free to use this script as you see fit.**
+
+![icons8-downloads-100](https://github.com/user-attachments/assets/c66d02a6-1186-4d21-8568-272968e5b3ed)
+
+![clatscopeinfo](https://github.com/user-attachments/assets/e0060201-2e10-41c2-b892-ba73726e1209)
 
 Command Line Interface Version:
 
@@ -26,7 +28,7 @@ ClatScope is an OSINT tool that performs various lookups and analyzes provided d
 
 Throughout the script, a textual UI is presented, prompting the user for inputs (e.g., IP address, phone number). Results are printed in styled ASCII frames using the pystyle library for aesthetics.
 
-**Version:** 1.10 (CLI)1.10.2 (GUI) (2025-02-06)
+**Version:** 1.14 (CLI)1.10.2 (GUI) (2025-02-06)
 **Author:** Joshua M Clatney aka Clats97 (Ethical Pentesting Enthusiast)
 
 ## Description
@@ -90,6 +92,23 @@ ClatScope Info Tool is an all-in-one OSINT (Open-Source Intelligence) utility sc
 55.  **Predicta Person Search** - Gives thorough information about a person using Predicta.
 56. **Theme/Color Settings** – Adjust console output color.
 
+57. **RapidAPI Services you need to subscribe to:
+-https://rapidapi.com/softrix-technologies-dnschecker/api/mac-address-lookup1
+-https://rapidapi.com/letscrape-6bRBa3QguO5/api/reverse-image-search1
+-https://rapidapi.com/acelogicgaming/api/osint-tool-investigation
+-https://rapidapi.com/Exerra/api/exerra-phishing-check
+-https://rapidapi.com/osint-org-osint-org-default/api/x-checker
+-https://rapidapi.com/do3t/api/truecaller-data2
+-https://rapidapi.com/Canssens/api/identity-generator
+-https://rapidapi.com/IgorMicrobilt/api/find-criminal-records-api
+-https://rapidapi.com/OSoMe/api/botometer-pro
+-https://rapidapi.com/rustychapin/api/known-vulnerability-search
+-https://rapidapi.com/breachbeach1/api/phone-leak-search
+-https://rapidapi.com/inutil-inutil-default/api/whatsapp-osint
+-https://rapidapi.com/apicodex-apis/api/email-intelligence-api
+
+(It's possible I may have missed one or two, if you're having trouble, contact me, or post in the discussion etc)
+
 ## Installation
 1. **Clone the Repository (or download the zip)**:
     
@@ -98,7 +117,8 @@ ClatScope Info Tool is an all-in-one OSINT (Open-Source Intelligence) utility sc
 2. **Install Dependencies**:
     Open command prompt and write:
 
-  pip install requests phonenumbers dnspython email-validator beautifulsoup4 lxml python-whois tqdm openai python-magic Pillow PyPDF2 openpyxl python-docx python-pptx mutagen tinytag tkinter
+pip install requests pystyle phonenumbers dnspython email-validator beautifulsoup4 lxml python-whois tqdm openai python-magic Pillow PyPDF2 openpyxl python-docx python-pptx mutagen tinytag
+
 
  3. **Run the Script**:
     Click on the Python file or open it in Visual Studio Code 

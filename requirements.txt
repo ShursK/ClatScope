@@ -9,6 +9,7 @@ Pillow
 PyPDF2
 python-docx
 python-pptx
+openai
 openpyxl
 mutagen
 tinytag
